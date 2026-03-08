@@ -435,54 +435,51 @@
       </div>
 
       <div class="filter-group">
-        <label>Edad</label>
-        <select id="f-edad">
-          <option value="">Cualquier edad</option>
-          <option>4 – 7 años</option>
-          <option>8 – 10 años</option>
-          <option>11 – 13 años</option>
-          <option>14 – 16 años</option>
-          <option>17 – 18 años</option>
+        <label>Club Oficial</label>
+        <select id="f-club">
+          <option value="">Todos</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Género</label>
+        <select id="f-genero">
+          <option value="">Todos</option>
+          <option value="mixto">Mixto</option>
+          <option value="femenino">Femenino</option>
         </select>
       </div>
 
       <div class="filter-group">
         <label>Alojamiento</label>
         <select id="f-alojamiento">
-          <option value="">Cualquiera</option>
-          <option>Externo (sin dormir)</option>
-          <option>Residencial</option>
+          <option value="">Todos</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <label>Mes</label>
-        <select id="f-mes">
-          <option value="">Cualquier mes</option>
-          <option>Junio</option>
-          <option>Julio</option>
-          <option>Agosto</option>
+        <label>Idioma</label>
+        <select id="f-idioma">
+          <option value="">Todos</option>
+          <option value="castellano">Castellano</option>
+          <option value="ingles">Inglés</option>
         </select>
       </div>
 
-    </div>
-
-    <div class="filter-group" style="margin-bottom:16px;">
-      <label>Precio máximo por semana</label>
-      <div class="price-row">
-        <input type="range" id="f-precio" min="0" max="2000" step="50" value="2000" />
-        <span class="price-val" id="precio-val">2.000€</span>
+      <div class="filter-group">
+        <label>Nivel deportivo</label>
+        <select id="f-nivel">
+          <option value="">Todos</option>
+          <option value="iniciacion">Iniciación</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="tecnificacion">Tecnificación</option>
+        </select>
       </div>
-    </div>
 
-    <div class="filter-group" style="margin-bottom:20px;">
-      <label>Género</label>
-      <div class="gender-pills">
-        <button class="pill-btn active" data-gender="todos" onclick="selectGender(this)">👫 Todos</button>
-        <button class="pill-btn" data-gender="mixto" onclick="selectGender(this)">🔀 Mixto</button>
-        <button class="pill-btn" data-gender="masculino" onclick="selectGender(this)">👦 Masculino</button>
-        <button class="pill-btn" data-gender="femenino" onclick="selectGender(this)">👧 Femenino</button>
-      </div>
     </div>
 
     <button class="btn-search" onclick="buscarCampus()">
@@ -517,43 +514,15 @@
   <div class="campus-grid" id="featured-grid"></div>
 </section>
 
-<!-- ── POR QUÉ NOSOTROS ── -->
-<section id="como-funciona">
-  <div class="section-header">
-    <div class="section-label">Por qué CampusFútbol</div>
-    <h2>La búsqueda que <em>faltaba</em></h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">🏟️</div>
-      <div class="why-title">Catálogo completo</div>
-      <div class="why-desc">Clubs profesionales, academias privadas, campus municipales y femeninos. Todo en un solo lugar.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">👧</div>
-      <div class="why-title">Filtro de género único</div>
-      <div class="why-desc">El único agregador con filtro real por género. Los campus femeninos ya tienen visibilidad.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">📱</div>
-      <div class="why-title">Diseño para móvil</div>
-      <div class="why-desc">Más del 70% de las búsquedas son desde el móvil. Nuestra web está optimizada para eso.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">✅</div>
-      <div class="why-title">Datos verificados</div>
-      <div class="why-desc">Cada campus es revisado por nuestro equipo y actualizado directamente con los organizadores.</div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ── CTA ── -->
 <div class="cta-section" id="cta">
   <h2>¿Organizas un campus?</h2>
   <p>Añade tu campus al mayor catálogo de España. Durante el primer año es completamente gratis.</p>
   <div class="cta-btns">
-    <a class="btn-pill" href="mailto:hola@campusfutbol.es?subject=Quiero añadir mi campus" style="padding:12px 28px; font-size:0.95rem;">Añadir mi campus gratis</a>
-    <a class="btn-outline" href="mailto:hola@campusfutbol.es">Contactar</a>
+    <a class="btn-pill" href="/cdn-cgi/l/email-protection#4a2225262b0a292b273a3f392c3f3e282526642f3975393f28202f293e771b3f232f38256a2b89fb2b2e23386a27236a292b273a3f39" style="padding:12px 28px; font-size:0.95rem;">Añadir mi campus gratis</a>
+    <a class="btn-outline" href="/cdn-cgi/l/email-protection#d5bdbab9b495b6b4b8a5a0a6b3a0a1b7bab9fbb0a6">Contactar</a>
   </div>
 </div>
 
@@ -566,11 +535,11 @@
   <div style="display:flex; gap:20px;">
     <a href="#">Aviso legal</a>
     <a href="#">Privacidad</a>
-    <a href="mailto:hola@campusfutbol.es">Contacto</a>
+    <a href="/cdn-cgi/l/email-protection#afc7c0c3ceefcccec2dfdadcc9dadbcdc0c381cadc">Contacto</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── DATOS DE EJEMPLO ──
   const campusData = [
     {
@@ -687,35 +656,23 @@
     featuredGrid.innerHTML += renderCard(c);
   });
 
-  // ── PRECIO SLIDER ──
-  const slider = document.getElementById('f-precio');
-  const priceVal = document.getElementById('precio-val');
-  slider.addEventListener('input', () => {
-    priceVal.textContent = parseInt(slider.value).toLocaleString('es-ES') + '€';
-  });
-
-  // ── GENDER PILLS ──
-  function selectGender(btn) {
-    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
 
   // ── BUSCAR ──
   function buscarCampus() {
     const provincia = document.getElementById('f-provincia').value;
-    const edad = document.getElementById('f-edad').value;
+    const club = document.getElementById('f-club').value;
+    const genero = document.getElementById('f-genero').value;
     const alojamiento = document.getElementById('f-alojamiento').value;
-    const mes = document.getElementById('f-mes').value;
-    const precioMax = parseInt(document.getElementById('f-precio').value);
-    const generoBtn = document.querySelector('.pill-btn.active');
-    const genero = generoBtn ? generoBtn.dataset.gender : 'todos';
+    const idioma = document.getElementById('f-idioma').value;
+    const nivel = document.getElementById('f-nivel').value;
 
     let results = campusData.filter(c => {
       if (provincia && c.provincia !== provincia) return false;
+      if (club && c.clubOficial !== club) return false;
+      if (genero && c.genero !== genero) return false;
       if (alojamiento && c.alojamiento !== alojamiento) return false;
-      if (mes && c.mes !== mes) return false;
-      if (c.precio > precioMax) return false;
-      if (genero !== 'todos' && c.genero !== genero) return false;
+      if (idioma && c.idioma !== idioma) return false;
+      if (nivel && c.nivel !== nivel) return false;
       return true;
     });
 
@@ -724,11 +681,4 @@
     document.getElementById('result-count').textContent = results.length;
     grid.innerHTML = results.length > 0
       ? results.map(renderCard).join('')
-      : `<p style="color:var(--muted); grid-column:1/-1; padding:40px 0; text-align:center;">No se encontraron campus con esos filtros. Prueba a ampliar la búsqueda.</p>`;
-
-    section.classList.add('visible');
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-</script>
-</body>
-</html>
+      : `<p style="color:var(--muted); g
