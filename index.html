@@ -539,7 +539,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── DATOS DE EJEMPLO ──
   const campusData = [
     {
@@ -547,11 +547,13 @@
       club: "Real Madrid CF",
       provincia: "Madrid",
       edad: "8 – 16 años",
-      alojamiento: "Residencial",
+      alojamiento: "si",
       mes: "Julio",
       precio: 850,
       genero: "mixto",
-      nivel: "Iniciación",
+      nivel: "iniciacion",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: true,
       emoji: "⚽"
     },
@@ -560,11 +562,13 @@
       club: "FC Barcelona",
       provincia: "Barcelona",
       edad: "6 – 14 años",
-      alojamiento: "Externo (sin dormir)",
+      alojamiento: "no",
       mes: "Julio",
       precio: 320,
       genero: "mixto",
-      nivel: "Iniciación",
+      nivel: "iniciacion",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: true,
       emoji: "🔵"
     },
@@ -573,11 +577,13 @@
       club: "Athletic Club de Bilbao",
       provincia: "Bilbao",
       edad: "8 – 16 años",
-      alojamiento: "Residencial",
+      alojamiento: "si",
       mes: "Agosto",
       precio: 690,
       genero: "femenino",
-      nivel: "Intermedio",
+      nivel: "intermedio",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: true,
       emoji: "🔴"
     },
@@ -586,11 +592,13 @@
       club: "Valencia CF",
       provincia: "Valencia",
       edad: "7 – 15 años",
-      alojamiento: "Externo (sin dormir)",
+      alojamiento: "no",
       mes: "Junio",
       precio: 280,
-      genero: "masculino",
-      nivel: "Iniciación",
+      genero: "mixto",
+      nivel: "iniciacion",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: false,
       emoji: "🦇"
     },
@@ -599,11 +607,13 @@
       club: "Sevilla FC",
       provincia: "Sevilla",
       edad: "10 – 17 años",
-      alojamiento: "Residencial",
+      alojamiento: "si",
       mes: "Julio",
       precio: 750,
       genero: "mixto",
-      nivel: "Alto rendimiento",
+      nivel: "tecnificacion",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: false,
       emoji: "⚪"
     },
@@ -612,11 +622,13 @@
       club: "Real Zaragoza",
       provincia: "Zaragoza",
       edad: "8 – 15 años",
-      alojamiento: "Externo (sin dormir)",
+      alojamiento: "no",
       mes: "Agosto",
       precio: 210,
       genero: "mixto",
-      nivel: "Intermedio",
+      nivel: "intermedio",
+      clubOficial: "si",
+      idioma: "castellano",
       destacado: false,
       emoji: "🧤"
     },
@@ -639,7 +651,7 @@
           <div class="campus-tags">
             ${genderTag}
             <span class="tag">📅 ${c.mes}</span>
-            <span class="tag">🏠 ${c.alojamiento === 'Residencial' ? 'Residencial' : 'Externo'}</span>
+            <span class="tag">🏠 ${c.alojamiento === 'si' ? 'Residencial' : 'Externo'}</span>
             <span class="tag">👤 ${c.edad}</span>
           </div>
           <div class="campus-footer">
@@ -681,4 +693,11 @@
     document.getElementById('result-count').textContent = results.length;
     grid.innerHTML = results.length > 0
       ? results.map(renderCard).join('')
-      : `<p style="color:var(--muted); g
+      : `<p style="color:var(--muted); grid-column:1/-1; padding:2rem 0;">No se encontraron campus con esos filtros. Prueba a ampliar la búsqueda.</p>`;
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+
+</script>
+</body>
+</html>
